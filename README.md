@@ -1,5 +1,4 @@
-[README.md](https://github.com/user-attachments/files/35237075/README.md)
-# Shoppy## Shoppy
+## Shoppy
 Shoppy is an e-commerce web app that allows you to operate as a vendor or buyer.
 
 ## Installation

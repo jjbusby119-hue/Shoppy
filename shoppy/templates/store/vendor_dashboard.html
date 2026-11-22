@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Your Stores</h2>
+
+<a href="{% url 'create_store' %}">
+    <button type="button">Create New Store</button>
+</a>
+
+<p>Here you can manage your stores and add products to them.</p>
+<p>Click on <i>Edit</i> to edit your store and all of its products.</p>
+
+<ul>
+    {% for store in stores %}
+        <li>
+            {{ store.name }}
+
+            <a href="{% url 'edit_store' store.id %}">
+                <button type="button">Edit</button>
+            </a>
+
+            <a href="{% url 'add_product' store.id %}">
+                <button type="button">Add Product</button>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
